@@ -1,31 +1,32 @@
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--bg-button-color);
 
   & .card {
-    width: 270px;
-    height: 168px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 30px;
-    text-align: center;
   }
+}
 
-  & .item {
-    background: var(--primary-lite-color);
-    line-height: 0px;
+.team-item {
+  background: var(--primary-lite-color);
+  line-height: 0px;
 
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-  }
+  margin: 15px;
 
-  & .item + .item {
-    margin-left: 30px;
-  }
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-list {
   display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 
   & .title {
     margin-bottom: 10px;
@@ -48,7 +49,10 @@
 }
 
 .social-list {
-  @include flex($jc: space-between);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 0;
 }
 
 .social-link {
@@ -70,5 +74,12 @@
   &:focus,
   &:hover {
     fill: var(--primary-lite-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }

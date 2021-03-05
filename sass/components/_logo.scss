@@ -3,12 +3,12 @@
 
   font-family: Raleway, sans-serif;
   text-decoration: none;
-  @include font(26px, 700, 31px);
+  @include font(24px, 700, 28px);
 }
 
 .header .logo {
-  padding: 24px 0px;
-  margin-right: 93px;
+  padding: 16px 0px;
+  margin-right: 88px;
 }
 
 .footer .logo {
@@ -20,4 +20,14 @@
 
 .web {
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    @include font(26px, 700, 31px);
+  }
+
+  .header .logo {
+    margin-right: 93px;
+  }
 }

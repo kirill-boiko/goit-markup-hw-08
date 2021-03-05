@@ -1,8 +1,17 @@
 .big-title {
-  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 
   color: var(--primary-text-color);
 
-  @include font(36px, 700, 42px);
+  @include font(28px, 700, 36px);
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .big-title {
+    margin-bottom: 50px;
+    @include font(36px, 700, 42px);
+  }
 }

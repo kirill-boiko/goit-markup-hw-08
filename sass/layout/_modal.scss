@@ -26,11 +26,14 @@
   position: absolute;
   top: 50%;
   left: 50%;
+
+  max-width: 450px;
+  max-height: 609px;
+
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-function);
   opacity: 1;
-  min-width: 528px;
-  min-height: 581px;
+
   padding: 40px;
 
   background: var(--primary-lite-color);
@@ -133,6 +136,8 @@
 
 .modal-box-policy {
   margin-bottom: 30px;
+  font-size: 10px;
+  line-height: 1.4;
 }
 
 .modal-message {
@@ -163,7 +168,6 @@
 .modal-policy {
   @include flex($ai: center, $jc: center);
 
-  flex-wrap: wrap;
   border-radius: 2px;
 
   &::before {
@@ -187,4 +191,24 @@
 
 .modal-check-policy:focus + .modal-policy::before {
   border: 2px solid var(--accent-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    height: 95%;
+    width: 95%;
+    overflow: scroll;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    max-height: 581px;
+  }
+
+  .modal-box-policy {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
