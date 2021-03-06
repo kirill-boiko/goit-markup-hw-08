@@ -22,12 +22,19 @@
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .header .logo {
+    padding: 26px 0;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .logo {
     @include font(26px, 700, 31px);
   }
 
   .header .logo {
+    padding: 24px 0;
     margin-right: 93px;
   }
 }

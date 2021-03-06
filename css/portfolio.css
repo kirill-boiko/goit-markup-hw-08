@@ -122,6 +122,12 @@ a {
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .header .logo {
+    padding: 26px 0;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .logo {
     font-size: 26px;
@@ -129,6 +135,7 @@ a {
     line-height: 1.192;
   }
   .header .logo {
+    padding: 24px 0;
     margin-right: 93px;
   }
 }
@@ -217,7 +224,7 @@ a {
     position: fixed;
     z-index: 1;
     width: 100%;
-    max-width: 480px;
+    max-width: 767px;
     height: 100vh;
     top: 0;
     left: 50%;
@@ -390,7 +397,7 @@ a {
     margin-right: 50px;
     margin-bottom: 0;
   }
-  .nav-main-link {
+  .contacts-list {
     padding-top: 32px;
     padding-bottom: 32px;
   }
